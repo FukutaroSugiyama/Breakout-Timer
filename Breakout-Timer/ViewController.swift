@@ -1,0 +1,151 @@
+//
+//  ViewController.swift
+//  Breakout-Timer
+//
+//  Created by 杉山福太郎 on 2021/08/07.
+//
+
+import UIKit
+
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+
+    @IBOutlet weak var setTime: UILabel!
+    @IBOutlet weak var startTimeTextField: UITextField!
+    @IBOutlet weak var closeTimeTextField: UITextField!
+    @IBOutlet weak var CountDawnTextField: UITextField!
+    
+    var startPicker: UIDatePicker!
+    var closePicker: UIDatePicker!
+    
+    var startTime = ""
+    var closeTime = ""
+    var countDawn = ""
+    
+    //StringとDateの相互変換
+    class DateUtils {
+        class func dateFromString(string: String, format: String) -> Date {
+            let formatter: DateFormatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .gregorian)
+            formatter.dateFormat = format
+            return formatter.date(from: string)!
+        }
+
+        class func stringFromDate(date: Date, format: String) -> String {
+            let formatter: DateFormatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .gregorian)
+            formatter.dateFormat = format
+            return formatter.string(from: date)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        startPicker = makePicker(true)
+        startTimeTextField.inputView = startPicker
+
+        closePicker = makePicker(false)
+        closeTimeTextField.inputView = closePicker
+        createPickerView()
+        
+        
+    }
+    
+    func makePicker(_ isA:Bool) -> UIDatePicker {
+        
+            let myPicker:UIDatePicker!
+            myPicker = UIDatePicker()
+            myPicker.tag = isA ? 1 : 2
+            myPicker.datePickerMode = .time
+            myPicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+            myPicker.preferredDatePickerStyle = .wheels
+
+            myPicker.addTarget(self, action:  #selector(onDidChangeDate(sender:)), for: .valueChanged)
+
+            return myPicker
+        }
+
+        @objc internal func onDidChangeDate(sender: UIDatePicker){
+            let formatter: DateFormatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+
+            let mySelectedDate = formatter.string(from: sender.date)
+            if sender.tag == 1 {
+                startTimeTextField.text = mySelectedDate
+            } else {
+                closeTimeTextField.text = mySelectedDate
+            }
+        }
+
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            startTimeTextField.endEditing(true)
+            closeTimeTextField.endEditing(true)
+            CountDawnTextField.endEditing(true)
+        }
+    
+    //カウントダウン
+        var pickerView = UIPickerView()
+        let dateList = [10, 15, 30, 60, 120]
+        let strDateList = ["10", "15", "30", "60", "120"]
+        //列数
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
+        //行数
+        func pickerView(_ pickerView: UIPickerView,
+                        numberOfRowsInComponent component: Int) -> Int {
+            return dateList.count
+        }
+        //PickerViewの選択肢として表示する文字列を設定（これがないと、?として表示されてしまう）
+        func pickerView(_ pickerView: UIPickerView,
+                        titleForRow row: Int,
+                        forComponent component: Int) -> String? {
+            return strDateList[row]
+            }
+        //Rowが選択された時の挙動
+        func pickerView(_ pickerView: UIPickerView,
+                        didSelectRow row: Int,
+                        inComponent component: Int) {
+            CountDawnTextField.text = "\(dateList[row])"
+        }
+        //pickerView を UITextField の入力に設定する
+        func createPickerView() {
+            pickerView.delegate = self
+            CountDawnTextField.inputView = pickerView
+        }
+        
+        @objc func donePicker() {
+            CountDawnTextField.endEditing(true)
+        }
+    //計算ボタン
+    @IBAction func CalculationButtonAction(_ sender: Any) {
+        var startTime = startTimeTextField.text!
+        var closeTime = closeTimeTextField.text!
+        var countDawn = CountDawnTextField.text!
+        
+        var date1 = DateUtils.dateFromString(string: startTime, format: "HH:mm")
+        var date2 = DateUtils.dateFromString(string: closeTime, format: "HH:mm")
+        var date3 = Int(countDawn)!
+        
+        var timeDiff: Int = Int(date2.timeIntervalSince(date1))
+        
+        if timeDiff >= 60 {
+            timeDiff /= 60
+        } else if timeDiff >= 3600 {
+            timeDiff /= 3600
+        }
+        
+        switch date3 {
+            case 10, 15, 30, 60:
+                timeDiff += 1
+            case 120:
+                timeDiff += 2
+            default:
+                break
+        }
+        
+        setTime.text = String(timeDiff)
+        
+    }
+    
+}

@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA5A170C26BEAB33003442FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A170B26BEAB33003442FB /* AppDelegate.swift */; };
+		BA5A170E26BEAB33003442FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A170D26BEAB33003442FB /* SceneDelegate.swift */; };
+		BA5A171026BEAB33003442FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A170F26BEAB33003442FB /* ViewController.swift */; };
+		BA5A171326BEAB33003442FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5A171126BEAB33003442FB /* Main.storyboard */; };
+		BA5A171526BEAB34003442FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5A171426BEAB34003442FB /* Assets.xcassets */; };
+		BA5A171826BEAB34003442FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5A171626BEAB34003442FB /* LaunchScreen.storyboard */; };
+		BA5A172326BEAB35003442FB /* Breakout_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A172226BEAB35003442FB /* Breakout_TimerTests.swift */; };
+		BA5A172E26BEAB35003442FB /* Breakout_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A172D26BEAB35003442FB /* Breakout_TimerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA5A171F26BEAB35003442FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5A170026BEAB33003442FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA5A170726BEAB33003442FB;
+			remoteInfo = "Breakout-Timer";
+		};
+		BA5A172A26BEAB35003442FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA5A170026BEAB33003442FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA5A170726BEAB33003442FB;
+			remoteInfo = "Breakout-Timer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA5A170826BEAB33003442FB /* Breakout-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakout-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5A170B26BEAB33003442FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA5A170D26BEAB33003442FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA5A170F26BEAB33003442FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA5A171226BEAB33003442FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA5A171426BEAB34003442FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA5A171726BEAB34003442FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA5A171926BEAB34003442FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5A171E26BEAB35003442FB /* Breakout-TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Breakout-TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5A172226BEAB35003442FB /* Breakout_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakout_TimerTests.swift; sourceTree = "<group>"; };
+		BA5A172426BEAB35003442FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5A172926BEAB35003442FB /* Breakout-TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Breakout-TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5A172D26BEAB35003442FB /* Breakout_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakout_TimerUITests.swift; sourceTree = "<group>"; };
+		BA5A172F26BEAB35003442FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA5A170526BEAB33003442FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A171B26BEAB35003442FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A172626BEAB35003442FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA5A16FF26BEAB33003442FB = {
+			isa = PBXGroup;
+			children = (
+				BA5A170A26BEAB33003442FB /* Breakout-Timer */,
+				BA5A172126BEAB35003442FB /* Breakout-TimerTests */,
+				BA5A172C26BEAB35003442FB /* Breakout-TimerUITests */,
+				BA5A170926BEAB33003442FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA5A170926BEAB33003442FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA5A170826BEAB33003442FB /* Breakout-Timer.app */,
+				BA5A171E26BEAB35003442FB /* Breakout-TimerTests.xctest */,
+				BA5A172926BEAB35003442FB /* Breakout-TimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA5A170A26BEAB33003442FB /* Breakout-Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BA5A170B26BEAB33003442FB /* AppDelegate.swift */,
+				BA5A170D26BEAB33003442FB /* SceneDelegate.swift */,
+				BA5A170F26BEAB33003442FB /* ViewController.swift */,
+				BA5A171126BEAB33003442FB /* Main.storyboard */,
+				BA5A171426BEAB34003442FB /* Assets.xcassets */,
+				BA5A171626BEAB34003442FB /* LaunchScreen.storyboard */,
+				BA5A171926BEAB34003442FB /* Info.plist */,
+			);
+			path = "Breakout-Timer";
+			sourceTree = "<group>";
+		};
+		BA5A172126BEAB35003442FB /* Breakout-TimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA5A172226BEAB35003442FB /* Breakout_TimerTests.swift */,
+				BA5A172426BEAB35003442FB /* Info.plist */,
+			);
+			path = "Breakout-TimerTests";
+			sourceTree = "<group>";
+		};
+		BA5A172C26BEAB35003442FB /* Breakout-TimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA5A172D26BEAB35003442FB /* Breakout_TimerUITests.swift */,
+				BA5A172F26BEAB35003442FB /* Info.plist */,
+			);
+			path = "Breakout-TimerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA5A170726BEAB33003442FB /* Breakout-Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5A173226BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-Timer" */;
+			buildPhases = (
+				BA5A170426BEAB33003442FB /* Sources */,
+				BA5A170526BEAB33003442FB /* Frameworks */,
+				BA5A170626BEAB33003442FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Breakout-Timer";
+			productName = "Breakout-Timer";
+			productReference = BA5A170826BEAB33003442FB /* Breakout-Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA5A171D26BEAB35003442FB /* Breakout-TimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5A173526BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-TimerTests" */;
+			buildPhases = (
+				BA5A171A26BEAB35003442FB /* Sources */,
+				BA5A171B26BEAB35003442FB /* Frameworks */,
+				BA5A171C26BEAB35003442FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA5A172026BEAB35003442FB /* PBXTargetDependency */,
+			);
+			name = "Breakout-TimerTests";
+			productName = "Breakout-TimerTests";
+			productReference = BA5A171E26BEAB35003442FB /* Breakout-TimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA5A172826BEAB35003442FB /* Breakout-TimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5A173826BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-TimerUITests" */;
+			buildPhases = (
+				BA5A172526BEAB35003442FB /* Sources */,
+				BA5A172626BEAB35003442FB /* Frameworks */,
+				BA5A172726BEAB35003442FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA5A172B26BEAB35003442FB /* PBXTargetDependency */,
+			);
+			name = "Breakout-TimerUITests";
+			productName = "Breakout-TimerUITests";
+			productReference = BA5A172926BEAB35003442FB /* Breakout-TimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA5A170026BEAB33003442FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					BA5A170726BEAB33003442FB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					BA5A171D26BEAB35003442FB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = BA5A170726BEAB33003442FB;
+					};
+					BA5A172826BEAB35003442FB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = BA5A170726BEAB33003442FB;
+					};
+				};
+			};
+			buildConfigurationList = BA5A170326BEAB33003442FB /* Build configuration list for PBXProject "Breakout-Timer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA5A16FF26BEAB33003442FB;
+			productRefGroup = BA5A170926BEAB33003442FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA5A170726BEAB33003442FB /* Breakout-Timer */,
+				BA5A171D26BEAB35003442FB /* Breakout-TimerTests */,
+				BA5A172826BEAB35003442FB /* Breakout-TimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA5A170626BEAB33003442FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5A171826BEAB34003442FB /* LaunchScreen.storyboard in Resources */,
+				BA5A171526BEAB34003442FB /* Assets.xcassets in Resources */,
+				BA5A171326BEAB33003442FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A171C26BEAB35003442FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A172726BEAB35003442FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA5A170426BEAB33003442FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5A171026BEAB33003442FB /* ViewController.swift in Sources */,
+				BA5A170C26BEAB33003442FB /* AppDelegate.swift in Sources */,
+				BA5A170E26BEAB33003442FB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A171A26BEAB35003442FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5A172326BEAB35003442FB /* Breakout_TimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5A172526BEAB35003442FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5A172E26BEAB35003442FB /* Breakout_TimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA5A172026BEAB35003442FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA5A170726BEAB33003442FB /* Breakout-Timer */;
+			targetProxy = BA5A171F26BEAB35003442FB /* PBXContainerItemProxy */;
+		};
+		BA5A172B26BEAB35003442FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA5A170726BEAB33003442FB /* Breakout-Timer */;
+			targetProxy = BA5A172A26BEAB35003442FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA5A171126BEAB33003442FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5A171226BEAB33003442FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA5A171626BEAB34003442FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5A171726BEAB34003442FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA5A173026BEAB35003442FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA5A173126BEAB35003442FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA5A173326BEAB35003442FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RRD2CPL26;
+				INFOPLIST_FILE = "Breakout-Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA5A173426BEAB35003442FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RRD2CPL26;
+				INFOPLIST_FILE = "Breakout-Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA5A173626BEAB35003442FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Breakout-TimerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breakout-Timer.app/Breakout-Timer";
+			};
+			name = Debug;
+		};
+		BA5A173726BEAB35003442FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Breakout-TimerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breakout-Timer.app/Breakout-Timer";
+			};
+			name = Release;
+		};
+		BA5A173926BEAB35003442FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Breakout-TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Breakout-Timer";
+			};
+			name = Debug;
+		};
+		BA5A173A26BEAB35003442FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Breakout-TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "S.Fukutaro.Breakout-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Breakout-Timer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA5A170326BEAB33003442FB /* Build configuration list for PBXProject "Breakout-Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5A173026BEAB35003442FB /* Debug */,
+				BA5A173126BEAB35003442FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5A173226BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5A173326BEAB35003442FB /* Debug */,
+				BA5A173426BEAB35003442FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5A173526BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-TimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5A173626BEAB35003442FB /* Debug */,
+				BA5A173726BEAB35003442FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5A173826BEAB35003442FB /* Build configuration list for PBXNativeTarget "Breakout-TimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5A173926BEAB35003442FB /* Debug */,
+				BA5A173A26BEAB35003442FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA5A170026BEAB33003442FB /* Project object */;
+}
