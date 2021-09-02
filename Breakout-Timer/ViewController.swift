@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var startPicker: UIDatePicker!
     var closePicker: UIDatePicker!
+    var alertController: UIAlertController!
     
     var startTime = ""
     var closeTime = ""
@@ -47,43 +48,55 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         closePicker = makePicker(false)
         closeTimeTextField.inputView = closePicker
         createPickerView()
-        
-        
     }
     
+    //ピッカーの設定
     func makePicker(_ isA:Bool) -> UIDatePicker {
         
-            let myPicker:UIDatePicker!
-            myPicker = UIDatePicker()
-            myPicker.tag = isA ? 1 : 2
-            myPicker.datePickerMode = .time
-            myPicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
-            myPicker.preferredDatePickerStyle = .wheels
+        let myPicker:UIDatePicker!
+        myPicker = UIDatePicker()
+        myPicker.tag = isA ? 1 : 2
+        myPicker.datePickerMode = .dateAndTime
+        myPicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+        myPicker.preferredDatePickerStyle = .wheels
 
-            myPicker.addTarget(self, action:  #selector(onDidChangeDate(sender:)), for: .valueChanged)
+        myPicker.addTarget(self, action:  #selector(onDidChangeDate(sender:)), for: .valueChanged)
 
-            return myPicker
+        return myPicker
+    }
+
+    //テキストフィールド入力
+    @objc internal func onDidChangeDate(sender: UIDatePicker){
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "M月d日 HH:mm"
+
+        let mySelectedDate = formatter.string(from: sender.date)
+        if sender.tag == 1 {
+            startTimeTextField.text = mySelectedDate
+        } else {
+            closeTimeTextField.text = mySelectedDate
         }
+    }
 
-        @objc internal func onDidChangeDate(sender: UIDatePicker){
-            let formatter: DateFormatter = DateFormatter()
-            formatter.dateFormat = "HH:mm"
-
-            let mySelectedDate = formatter.string(from: sender.date)
-            if sender.tag == 1 {
-                startTimeTextField.text = mySelectedDate
-            } else {
-                closeTimeTextField.text = mySelectedDate
-            }
-        }
-
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            startTimeTextField.endEditing(true)
-            closeTimeTextField.endEditing(true)
-            CountDawnTextField.endEditing(true)
+    //何もないところをタップで閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        startTimeTextField.endEditing(true)
+        closeTimeTextField.endEditing(true)
+        CountDawnTextField.endEditing(true)
+    }
+    
+    //アラート
+    func alert(title:String, message:String) {
+            alertController = UIAlertController(title: title,
+                                       message: message,
+                                       preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK",
+                                           style: .default,
+                                           handler: nil))
+            present(alertController, animated: true)
         }
     
-    //カウントダウン
+    //カウントダウンピッカーの設定
         var pickerView = UIPickerView()
         let dateList = [10, 15, 30, 60, 120]
         let strDateList = ["10", "15", "30", "60", "120"]
@@ -119,22 +132,34 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     //計算ボタン
     @IBAction func CalculationButtonAction(_ sender: Any) {
-        var startTime = startTimeTextField.text!
-        var closeTime = closeTimeTextField.text!
-        var countDawn = CountDawnTextField.text!
+        //textFieldの値を取得
+        let startTime: String = startTimeTextField.text!
+        let closeTime: String = closeTimeTextField.text!
+        let countDawn: String = CountDawnTextField.text!
         
-        var date1 = DateUtils.dateFromString(string: startTime, format: "HH:mm")
-        var date2 = DateUtils.dateFromString(string: closeTime, format: "HH:mm")
-        var date3 = Int(countDawn)!
+        //値が入力されていることを確認
+        if startTime.isEmpty || closeTime.isEmpty || countDawn.isEmpty {
+            alert(title: "エラー", message:"テキストフィールドの入力が完了していません。")
+            return
+        }
+        //string型からdate型に変換する
+        let date1: Date? = DateUtils.dateFromString(string: startTime, format: "M月d日 HH:mm")
+        let date2: Date? = DateUtils.dateFromString(string: closeTime, format: "M月d日 HH:mm")
+        let date3: Int? = Int(countDawn)!
         
-        var timeDiff: Int = Int(date2.timeIntervalSince(date1))
+        //時間差を求める
+        //返ってくる値は秒単位
+        var timeDiff: Int = Int(date2!.timeIntervalSince(date1!))
         
         if timeDiff >= 60 {
             timeDiff /= 60
         } else if timeDiff >= 3600 {
             timeDiff /= 3600
+        } else if timeDiff < 0 {
+            alert(title: "エラー", message:"クローズ時間がスタート時間よりも前になっています。")
         }
         
+        //カウントダウンタイマーの分数を追加
         switch date3 {
             case 10, 15, 30, 60:
                 timeDiff += 1
@@ -144,7 +169,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 break
         }
         
-        setTime.text = String(timeDiff)
+        //分数をセットする
+        if timeDiff >= 0 {
+            setTime.text = String(timeDiff)
+        } else {
+            setTime.text = "0"
+        }
         
     }
     
