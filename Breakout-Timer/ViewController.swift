@@ -162,9 +162,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         //カウントダウンタイマーの分数を追加
         switch date3 {
             case 10, 15, 30, 60:
-                timeDiff += 1
+                timeDiff -= 1
             case 120:
-                timeDiff += 2
+                timeDiff -= 2
             default:
                 break
         }
